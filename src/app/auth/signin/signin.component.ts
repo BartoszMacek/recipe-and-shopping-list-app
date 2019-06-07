@@ -9,7 +9,7 @@ import {AuthService} from '../auth.service';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(private authServe: AuthService) {
+  constructor(private authService: AuthService) {
   }
 
   ngOnInit() {
@@ -18,7 +18,7 @@ export class SigninComponent implements OnInit {
   onSignIn(form: NgForm) {
     const email = form.value.email;
     const password = form.value.password;
-    this.authServe.signInUser(email, password);
+    this.authService.signInUser(email, password);
   }
 
 }
